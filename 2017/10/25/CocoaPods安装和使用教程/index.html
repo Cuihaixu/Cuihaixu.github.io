@@ -10,7 +10,7 @@
   
   <title>
     
-      Hello World | 黑猫警长
+      黑猫警长
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -138,8 +138,8 @@
 </header>
 
     <div id="article-banner">
-  <h2>Hello World</h2>
-  <p class="post-date">2018-05-03</p>
+  <h2></h2>
+  <p class="post-date">2017-10-25</p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -147,15 +147,27 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+    <section class="markdown-content"><h1 id="CocoaPods安装和使用教程"><a href="#CocoaPods安装和使用教程" class="headerlink" title="CocoaPods安装和使用教程"></a>CocoaPods安装和使用教程</h1><p>2017年10月25日</p>
+<p><strong>目录</strong></p>
+<p>[TOC]</p>
+<h2 id="安装CocoaPods"><a href="#安装CocoaPods" class="headerlink" title="安装CocoaPods"></a>安装CocoaPods</h2><p><strong>1. 首先更换 Ruby 镜像源</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 1. 移除现有的Ruby镜像源</span><br><span class="line">$ gem sources --remove https://rubygems.org/</span><br><span class="line"></span><br><span class="line">// 2. 添加国内Ruby镜像源</span><br><span class="line">$ gem sources -a https://gems.ruby-china.org/</span><br></pre></td></tr></table></figure>
+<p><strong>2. 查看 Ruby 镜像源是否更换成功</strong></p>
+<p>输入命令查看当前镜像源</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gem sources -l</span><br></pre></td></tr></table></figure>
+<p>显示此结果说明更换成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*** CURRENT SOURCES ***</span><br><span class="line">https://gems.ruby-china.org/</span><br></pre></td></tr></table></figure>
+<p><strong>3. 开始安装 cocoaPods</strong></p>
+<p>安装命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo gem install cocoapods</span><br></pre></td></tr></table></figure>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p><strong>1. 初始化Pods工程</strong></p>
+<p>使用<code>pod</code>命令初始化工程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 1. 进入已有工程根目录</span><br><span class="line">$ cd #工程目录#</span><br><span class="line"></span><br><span class="line">// 2. 初始化Pods工程</span><br><span class="line">$ pod init</span><br></pre></td></tr></table></figure>
+<p>当执行完init命令后，在当前目录中会生成一个MakeFile文件。 通过编辑这个文件来管理三方库的添加、删除、指定三方库版本等功能。</p>
+<p>文件内容:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>2. 更新Pods工程</strong><br><strong>3. 使用Pods管理三方库</strong></p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 搜索三方库</span><br><span class="line">$ pod search #三方库名称#</span><br><span class="line"></span><br><span class="line">// 初始化Pods工程</span><br><span class="line">$ pod init</span><br><span class="line"></span><br><span class="line">// 安装三方库</span><br><span class="line">$ pod install</span><br><span class="line"></span><br><span class="line">// 更新三方库</span><br><span class="line">$ pod update</span><br></pre></td></tr></table></figure>
 </section>
     <!-- Tags START -->
     
@@ -165,15 +177,8 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-      <a class="nav-left" href="/2018/05/03/视图控制的生命周期/">
-        <span class="nav-arrow">← </span>
-        
-          (untitled)
-        
-      </a>
     
-    
-      <a class="nav-right" href="/2018/05/03/new-world/">
+      <a class="nav-right" href="/2018/05/03/视图控制的生命周期/">
         
           (untitled)
         
@@ -224,7 +229,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Quick-Start"><span class="toc-nav-text">Quick Start</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Create-a-new-post"><span class="toc-nav-text">Create a new post</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Run-server"><span class="toc-nav-text">Run server</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Generate-static-files"><span class="toc-nav-text">Generate static files</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Deploy-to-remote-sites"><span class="toc-nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#CocoaPods安装和使用教程"><span class="toc-nav-text">CocoaPods安装和使用教程</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#安装CocoaPods"><span class="toc-nav-text">安装CocoaPods</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#使用方法"><span class="toc-nav-text">使用方法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#常用命令"><span class="toc-nav-text">常用命令</span></a></li></ol></li></ol>
     
   </div>
 </aside>
@@ -234,7 +239,7 @@
 
 <script>
   (function () {
-    var url = 'http://yoursite.com/2018/05/03/hello-world/';
+    var url = 'http://yoursite.com/2017/10/25/CocoaPods安装和使用教程/';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
@@ -290,7 +295,7 @@
     var gitmentConfig = "yanm1ng";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "Hello World",
+        id: "",
         owner: "yanm1ng",
         repo: "yanm1ng.github.io",
         oauth: {
